@@ -1,6 +1,11 @@
 import Control.Monad -- for文を使う時に必要
 import Data.IORef    -- 変数を使う時に必要
 
+{-
+for 文は純粋でない関数内でしか使うことができない
+以下で使っている for はバグの原因になるため、あまりよくない使い方 (らしい)
+-}
+
 main = do
     printList [1..5]
 
