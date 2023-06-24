@@ -1,4 +1,16 @@
 main = do
     putStrLn "number:"
     num <- getLine
-    putStrLn num
+    printInEnglish num
+
+-- 純粋でない関数
+printInEnglish num = do
+    case num of
+        "1" -> do
+            putStrLn "one"
+        "2" -> do
+            putStrLn "two"
+        "3" -> do
+            putStrLn "three"
+        _ -> do
+            putStrLn "I don't know."
