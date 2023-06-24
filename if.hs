@@ -22,7 +22,4 @@ answerToGreeting greeting = do
 
 -- 純粋な関数ないの `if`
 -- `then`, `else` の後に do がつかない
-checkNum num = 
-    if num == "0"
-        then "ゼロ〜"
-        else "ゼロ以外"
+checkNum num = if num == "0" then "ゼロ〜" else "ゼロ以外"
