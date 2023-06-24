@@ -7,3 +7,9 @@ main = do
     putStrLn foo
     putStrLn (show bar)
     print baz
+
+    {-
+        ↓ これをコメントアウトするかどうかで getContents の受付があるかどうかが決まるっぽい
+            使ってない変数があると代入が無視される..??
+    -}
+    -- putStrLn c
