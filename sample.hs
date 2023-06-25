@@ -11,11 +11,27 @@ where 下で定義した定数は、この関数の内部でのみ使うこと�
 テストのしやすさなどから、できるだけこちらのタイプの関数を定義して使うと良い (らしい)
 -}
 
+main :: IO ()
 main = do
     let message = howOldAreYou "いぬ" 10
     putStrLn message
 
+howOldAreYou :: String -> Int -> String
 howOldAreYou name age = nameSan ++ ageSai
  where
     nameSan = name ++ "さん"
     ageSai = show age ++ "歳"
+
+{-
+[関数の型の書き方]
+-- 引数を好きなだけ並べて、最後に戻り値の型
+-- 全て矢印 `->` で繋げる
+関数名 :: 最初の引数の型 -> 次の引数の型 -> 戻り値の型
+関数の定義
+
+[値に型を明記する]
+(値 :: 型)
+
+[ = 以降の部分の型を明記する]
+なんとか = 式 :: 式の部分の型
+-}
