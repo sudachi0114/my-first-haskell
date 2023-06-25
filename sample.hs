@@ -13,14 +13,18 @@ where 下で定義した定数は、この関数の内部でのみ使うこと�
 
 main :: IO ()
 main = do
-    let message = howOldAreYou "いぬ" 10
-    putStrLn message
+    let 
+        message :: String
+        message = howOldAreYou "いぬ" 10
+    putStrLn (message :: String) :: IO ()
 
 howOldAreYou :: String -> Int -> String
-howOldAreYou name age = nameSan ++ ageSai
+howOldAreYou name age = nameSan ++ ageSai :: String
  where
-    nameSan = name ++ "さん"
-    ageSai = show age ++ "歳"
+    nameSan :: String
+    nameSan = name ++ ("さん" :: String) :: String
+    ageSai :: String
+    ageSai = show age ++ ("歳" :: String) :: String
 
 {-
 [関数の型の書き方]
